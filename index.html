@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="css/allStyle.css">
+    <link rel="stylesheet" href="css/mainStyle.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <!--页面的主体部分-->
+    <article id="content">
+        <header id="pageHeader"></header>
+        <article id="main">
+            <div id="mainAside"></div>
+            <iframe id="mainContent" src="html/indexPage.html"></iframe>
+        </article>
+        <nav>
+            <div class="navButton isClecked" id="navIndex"><div class="iconfont">&#xe642;</div><p>首页</p></div>
+            <div class="navButton" id="navFind"><div class="iconfont">&#xe609;</div><p>发现</p></div>
+            <div class="navButton" id="navTravel"><div class="iconfont">&#xe606;</div><p>行程</p></div>
+        </nav>
+    </article>
+    <!--侧滑部分-->
+    <aside id="mine">
+        <iframe id="mineContent" src="html/minePage.html"></iframe>
+    </aside>
+    <script src="js/jquery-2.1.4.min.js" type="text/javascript"></script>
+    <script src="js/slideJQ.js" type="text/javascript"></script>
+    <script src="js/slideContent.js" type="text/javascript"></script>
+    <script src="js/changePage.js" type="text/javascript"></script>
+</body>
+
+</html>

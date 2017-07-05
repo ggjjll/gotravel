@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <link rel="stylesheet" href="../css/findStyle.css">
+</head>
+<body  ng-app="app" ng-controller="thisCtrl">
+    <div id="headerAdv">
+        <img class="advImg" src="../img/find_header.jpg" />
+        <span id="advTitle">唯美夏威夷，等你来体验</span>
+    </div>
+    <div class="spaceList appCake" id="hotSpace">
+        <header>
+            <img class="headerIcon" src="../img/find_blue.png">
+            <span>热门推荐</span>
+            <img class="moreButton" src="../img/find_more.png"/>
+        </header>
+        <div class="imgCake" ng-repeat="a in hotList">
+            <img src="../img/find_hot_img1.png" ng-src={{"../img/"+a.src}}>
+            <div class="title">{{a.title}}</div>
+            <div class="continue">{{a.continue}}</div>
+        </div>
+    </div>
+    <div class="spaceList appCake" id="inseatSpace">
+        <header>
+            <img class="headerIcon" src="../img/find_blue.png">
+            <span>国内热推</span>
+            <img class="moreButton" src="../img/find_more.png"/>
+        </header>
+        <div class="imgCake" ng-repeat="a in inseatList">
+            <img src="../img/find_hot_img1.png" ng-src={{"../img/"+a.src}}>
+            <div class="title">{{a.title}}</div>
+            <div class="continue">{{a.continue}}</div>
+        </div>
+    </div>
+    <div class="spaceList appCake" id="outseatSpace">
+        <header>
+            <img class="headerIcon" src="../img/find_blue.png">
+            <span>国外必去</span>
+            <img class="moreButton" src="../img/find_more.png"/>
+        </header>
+        <div class="imgCake" ng-repeat="a in outseatList">
+            <img src="../img/find_hot_img1.png" ng-src={{"../img/"+a.src}}>
+            <div class="title">{{a.title}}</div>
+            <div class="continue">{{a.continue}}</div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/appData.js"></script>
+    <script type="text/javascript">
+        var smallHotList = new Array(4);
+        for(var i = 0; i < 4; i ++){
+            smallHotList[i] = findHotList[i];
+        }
+        var smallInseatList = new Array(4);
+        for(var i = 0; i < 4; i ++){
+            smallInseatList[i] = findInseatList[i];
+        }
+        var smallOutseatList = new Array(4);
+        for(var i = 0; i < 4; i ++){
+            smallOutseatList[i] = findOutseatList[i];
+        }
+        angular.module("app",[])
+                .controller("thisCtrl",function($scope){
+                    $scope.hotList = smallHotList;
+                    $scope.inseatList = smallInseatList;
+                    $scope.outseatList = smallOutseatList;
+                });
+        $(function(){
+            $(".spaceList>header").each(function(){
+                $(this).on("touchend",function(){
+                    var id = $(this.parentNode).attr("id").charAt(0);
+                    switch (id){
+                        case 'h':window.open("findList.html?hot","_parent");break;
+                        case 'i':window.open("findList.html?inseat","_parent");break;
+                        case 'o':window.open("findList.html?outseat","_parent");break;
+                    }
+                })
+            })
+        })
+    </script>
+</body>
+
+
+</html>

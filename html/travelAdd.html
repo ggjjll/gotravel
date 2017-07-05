@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        body{
+            background-color: #EBEBEB;
+        }
+        .travelButton{
+            position: absolute;
+            top: 40vh;
+            width: 18vw;
+            height: 50px;
+        }
+        #trainBox{
+            left: 20vw;
+        }
+        #aircraftBox{
+            right: 20vw;
+        }
+        .travelButton img{
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .travelButton .buttonTitle{
+            height: 1.5rem;
+            font-size: 0.9rem;
+            line-height: 1.5rem;
+            text-align: center;
+        }
+        #closeButton{
+            position: absolute;
+            width: 12vw;
+            height: 12vw;
+            top: 85vh;
+            left: 44vw;
+        }
+        #closeButton img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="travelButton" id="trainBox">
+        <img src="../img/travel_train.png" alt="">
+        <div class="buttonTitle">火车</div>
+    </div>
+    <div class="travelButton" id="aircraftBox">
+        <img src="../img/travel_plane.png" alt="">
+        <div class="buttonTitle">飞机</div>
+    </div>
+    <div id="closeButton">
+        <img src="../img/travel_close.png" alt="">
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+
+</html>

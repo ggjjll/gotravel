@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        #timeLine{
+            position: fixed;
+            top: 7vh;
+            left: 8vw;
+            width: 1px;
+            height: 100%;
+            background-color: #D2D1D1;
+        }
+        .bubbleBox{
+            position: relative;
+            width: auto;
+            height: auto;
+            margin: 20px 8vw 0 10vw;
+            border-top: 50px solid #3EC1DD;
+            border-right: 30px solid #3EC1DD;
+            border-bottom: 30px solid #3EC1DD;
+            border-left: 40px solid #3EC1DD;
+            border-image: url("../img/footer_bubble.png") 50 30 30 40;
+            -webkit-border-image: url("../img/footer_bubble.png") 50 30 30 40;
+            -moz-border-image:  url("../img/footer_bubble.png") 50 30 30 40;
+        }
+        .bubbleBox .time{
+            margin-top: -40px;
+            font-size: 0.7rem;
+            color: #BABABA;
+        }
+        .bubbleBox .speak{
+            display: block;
+            font-size: 0.95rem;
+            line-height: 1.4rem;
+            margin: 5px -20px 0 0;
+        }
+        .bubbleBox img{
+            margin: 5px 0 -15px 0;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="pageHeader">
+        我的足迹
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon" ng-controller="thisCtrl">
+        <div id="timeLine"></div>
+        <div class="bubbleBox" ng-repeat="footer in userFooterData">
+            <p class="time">{{footer.time}}</p>
+            <p class="speak">{{footer.speak}}</p>
+            <img ng-src={{"../img/"+footer.img}} />
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/appData.js"></script>
+<script type="text/javascript">
+    angular.module("app",[])
+            .controller("thisCtrl",function($scope){
+                $scope.userFooterData = userFooter;
+            });
+</script>
+</html>

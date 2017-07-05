@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        .couponBox{
+            position: relative;
+            background-color: white;
+            margin:1rem;
+            height: 3.5rem;
+        }
+        .couponBox img{
+            position: absolute;
+            top: .25rem;
+            left: .35rem;
+            height: 3rem;
+            border-radius: 50%;
+        }
+        .couponBox div{
+            position: absolute;
+            left: 4rem;
+        }
+        .couponBox .title{
+            top:.25rem;
+            font-size: .6rem;
+        }
+        .couponBox .mainCon{
+            top: 1.6rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="pageHeader">
+        我的优惠券
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon" ng-controller="thisCtrl">
+        <div class="couponBox">
+            <img src="../img/mine_face.png">
+            <div class="title">去浪优惠</div>
+            <div class="mainCon">100元代金券</div>
+        </div>
+        <div class="couponBox">
+            <img src="../img/mine_face.png">
+            <div class="title">去浪优惠</div>
+            <div class="mainCon">1000元游轮抵扣券</div>
+        </div>
+        <div class="couponBox">
+            <img src="../img/mine_face.png">
+            <div class="title">去浪优惠</div>
+            <div class="mainCon">1000元机票抵扣券</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+</html>

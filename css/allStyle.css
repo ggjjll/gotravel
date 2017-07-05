@@ -1,0 +1,62 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html,body{
+    width: 100%;
+}
+body{
+    font-family: "微软雅黑","黑体","Adobe Arabic";
+    font-size: 1em;
+    height: auto;
+    overflow-x: hidden;
+    background-color: #F0F2F2;
+}
+ul,li{
+    list-style: none;
+}
+#headerAdv{
+    position: relative;
+    width: 100%;
+    height: 19vh;
+    overflow: hidden;
+}
+#headerAdv .advImg{
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.appCake{
+    position: relative;
+    width: 100%;
+    display: block;
+    background-color: white;
+    padding: 0.5vw;
+    border-bottom: 1px solid #e5e5e5;
+}
+#pageHeader{
+    height: 7vh;
+    font-size: 1.6rem;
+    letter-spacing: 1rem;
+    text-indent: 1rem;
+    background-color: #3FC0DD;
+    text-align: center;
+    line-height: 7vh;
+    color: #F0F2F2;
+}
+#pageHeader div#closeButton{
+    position: absolute;
+    height: 4vh;
+    width: 4vh;
+    top: 1.5vh;
+    left: 1.5vh;
+    background-image: url("../img/all_golast.png");
+    background-size: auto 100%;
+}
+#pageMainCon{
+    position: relative;
+    height: 93vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}

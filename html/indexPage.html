@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <link rel="stylesheet" href="../css/indexStyle.css">
+</head>
+<body>
+    <div id="headerAdv">
+        <img class="advImg isShowImg" src="../img/index_ad1.jpg">
+        <img class="advImg" src="../img/index_ad2.jpg">
+        <img class="advImg" src="../img/index_ad3.jpg">
+        <div id="advBall">
+            <span class="smallBall isSelectBall"></span>
+            <span class="smallBall"></span>
+            <span class="smallBall"></span>
+        </div>
+    </div>
+    <div class="appCake">
+        <div id="navButtonBox">
+            <div class="navButton" id="wantTo"><img src="../img/index_wangto.png"><span>我想去</span></div>
+            <div class="navButton" id="wantEat"><img src="../img/index_wanteat.png"><span>好想吃</span></div>
+            <div class="navButton" id="wantHappy"><img src="../img/index_wanthappy.png"><span>带我飞</span></div>
+        </div>
+    </div>
+    <div id="sendList" ng-app="app" ng-controller="thisCtrl">
+        <div class="sendListOne" ng-repeat="a in mainList">
+            <img class="mainImg"  ng-src={{"../img/"+a.img}}>
+            <div class="mainTitle">{{a.title}}</div>
+            <div class="userBox">
+                <img class="userFace" ng-src={{"../img/"+a.face}} />
+                <div class="userSpeak">{{a.speak}}</div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/advPaly.js"></script>
+    <script type="text/javascript" src="../js/appData.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script>
+        angular.module("app",[])
+                .controller("thisCtrl",function($scope){
+                    $scope.mainList = indexList;
+                });
+        $(".navButton").on("touchend",function(){
+            var id = $(this).attr("id").charAt(4);
+            console.log(id);
+            switch (id){
+                case 'T':window.open("indexWantto.html","_parent");break;
+                case 'E':window.open("indexWanteat.html","_parent");break;
+                case 'H':window.open("indexWanthappy.html","_parent");break;
+            }
+        })
+    </script>
+</body>
+
+
+</html>

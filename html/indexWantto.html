@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        .appCake{
+            padding: 0;
+            float: left;
+        }
+        .inputBox{
+            position: relative;
+            height: 1.6rem;
+            margin: .5rem;
+            background-color: #e5e5e5;
+            padding-left: 1.6rem;
+            border-radius: .4rem;
+        }
+        .inputBox img{
+            position: relative;
+            margin-left: -1.4rem;
+            top: .2rem;
+            height: 1.2rem;
+        }
+        .inputBox input{
+            position: absolute;
+            top: 0;
+            margin-left: .4rem;
+            height: 100%;
+            width: 80%;
+            border: none;
+            background-color: rgba(0,0,0,0);
+            outline: none;
+        }
+        .hotSpace{
+            padding: .4rem;
+        }
+        .cityList{
+            display: inline-block;
+            background-color: white;
+            margin: .5rem;
+            padding: .3rem;
+            width: 21vw;
+            text-align: center;
+            border-radius: .5rem;
+            border: solid 1px #D9D9D9;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="pageHeader">
+        我想去
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon" ng-controller="thisCtrl">
+        <div class="appCake">
+            <div class="inputBox">
+                <img src="../img/goto_find.png">
+                <input type="text" id="userSpace" placeholder="请输入您想去的城市">
+            </div>
+        </div>
+        <div class="hotSpace">
+            <div class="title">热门城市</div>
+            <div class="cityList" ng-repeat="city in cityList">{{city}}</div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/appData.js"></script>
+<script type="text/javascript">
+    angular.module("app",[])
+            .controller("thisCtrl",function($scope){
+                $scope.cityList = wanttoCity;
+            });
+    $(function(){
+        $(".cityList").each(function(){
+            $(this).on("touchend",function(){
+                $("#userSpace").val($(this).text());
+                setTimeout(finish,800);
+            })
+        })
+    });
+</script>
+</html>

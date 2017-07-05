@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <link rel="stylesheet" href="../css/mineStyle.css">
+</head>
+<body>
+    <div id="userMess">
+        <img src="../img/mine_face.png">
+        <p>去浪吧</p>
+    </div>
+    <article>
+        <ul id="mineMune">
+            <li class="mineList" id="userLogin">用户登录</li>
+            <li class="mineList" id="userTravel">我的行程</li>
+            <li class="mineList" id="userFooter">我的足迹</li>
+            <li class="mineList" id="userIntegral">我的积分</li>
+            <li class="mineList" id="userCoupon">我的优惠券</li>
+        </ul>
+    </article>
+    <address>
+        &copy;红鲤鱼与绿鲤鱼 2016
+    </address>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $(".mineList").each(function(){
+                var $this = $(this);
+                $this.on("touchend",function(){
+                    var width = document.body.offsetWidth;
+                    window.parent.contentObj.obj.autoClose(width,true);
+                    var id = $(this).attr("id").charAt(4);
+                    switch (id){
+                        case 'L':window.open("mineLogin.html","_parent");break;
+                        case 'T':toTravelPage();break;
+                        case 'F':window.open("mineFooter.html","_parent");break;
+                        case 'I':window.open("mineIntegral.html","_parent");break;
+                        case 'C':window.open("mineCoupon.html","_parent");break;
+                    }
+                })
+            })
+        });
+        function toTravelPage(){
+            sessionStorage.navPageId = navPageId = "navTravel";
+            window.parent.onload();
+        }
+    </script>
+
+</body>
+
+
+</html>

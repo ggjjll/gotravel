@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        html,body{
+            height: 100%;
+        }
+        body{
+            /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#41c3df+0,83e7ff+100 */
+            background: #41c3df; /* Old browsers */
+            background: -moz-linear-gradient(top,  #41c3df 0%, #83e7ff 100%); /* FF3.6-15 */
+            background: -webkit-linear-gradient(top,  #41c3df 0%,#83e7ff 100%); /* Chrome10-25,Safari5.1-6 */
+            background: linear-gradient(to bottom,  #41c3df 0%,#83e7ff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#41c3df', endColorstr='#83e7ff',GradientType=0 ); /* IE6-9 */
+        }
+        #appLogo{
+            position: absolute;
+            top: 18vh;
+            height: 20vh;
+            left: 50%;
+            margin-left: -10vh;
+        }
+        #appName{
+            position: absolute;
+            top: 42vh;
+            width: 14vh;
+            left: 50%;
+            margin-left: -7vh;
+        }
+        #loginFrom{
+            position: absolute;
+            display: block;
+            top: 55vh;
+            left: 10vw;
+            width: 80vw;
+            background-color: white;
+        }
+        #triangle{
+            position: relative;
+            width: 0;
+            height: 0;
+            margin-top: -5vw;
+            left: 37vw;
+            border-top: none ;
+            border-right: 3vw solid rgba(0,0,0,0);
+            border-bottom: 5vw solid white;
+            border-left: 3vw solid rgba(0,0,0,0);
+        }
+        .inputBox{
+            height: 9vh;
+            padding: 0 0 0 7vh;
+            border-bottom: 1px solid #ECEDE9;
+        }
+        .inputBox img{
+            position: absolute;
+            width: 3vh;
+            margin: 3vh 0 0 -5vh;
+        }
+        .inputBox input{
+            position: relative;
+            display: inline-block;
+            width: 98%;
+            height: 100%;
+            border: none;
+            margin-top: 0;
+            top: 0;
+            font-size: 1rem;
+            outline: none;
+            font-family: "微软雅黑", "黑体", "Adobe Arabic";
+            font-weight: 100;
+        }
+        #loginBtn{
+            height: 9vh;
+            line-height: 9vh;
+            color: #83DBEC;
+            font-weight: 800;
+            text-align: center;
+        }
+        #closeButton{
+            position: absolute;
+            top: 3vw;
+            left: 3vw;
+            width: 6.5vw;
+        }
+    </style>
+</head>
+<body>
+    <img id="closeButton" src="../img/login_close.png">
+    <img id="appLogo" src="../img/app_logo.png">
+    <img id="appName" src="../img/login_appname.png">
+    <div id="loginFrom">
+        <div id="triangle"></div>
+        <div class="inputBox">
+            <img src="../img/login_user.png">
+            <input type="text" placeholder="请输入用户名"/>
+        </div>
+        <div class="inputBox">
+            <img src="../img/login_password.png">
+            <input type="password" placeholder="请输入密码"/>
+        </div>
+        <div id="loginBtn">
+            登&nbsp;&nbsp;&nbsp;&nbsp;录
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="../js/closeEvent.js"></script>
+</body>
+</html>

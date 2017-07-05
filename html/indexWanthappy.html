@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        .headerBtnBox{
+            display: inline-flex;
+            display: -webkit-inline-flex;
+            flex-wrap: wrap;
+            padding: .5rem 0;
+        }
+        .iconBtn{
+            -webkit-flex:1;
+            flex: 1;
+            min-width: 20%;
+            height: 13vh;
+            text-align: center;
+        }
+        .iconBtn img{
+            height: 9.1vh;
+            width: auto;
+
+        }
+        .iconBtn .btnText{
+            line-height: 3.5vh;
+            height: 3.5vh;
+            text-align: center;
+            font-size: .8rem;
+        }
+        .spaceList{
+            position: relative;
+            margin-top: .5rem;
+            padding: .5rem;
+        }
+        .spaceList header{
+            position: relative;
+            display: block;
+            height: 1.5rem;
+            margin-bottom: .25rem;
+        }
+        .spaceList header .headerIcon{
+            position: relative;
+            margin-left: -.2rem;
+            height: 100%;
+        }
+        .spaceList header span{
+            position: absolute;
+            display: inline-block;
+            padding: 0;
+            margin-left: .5rem;
+        }
+        .spaceList header .moreButton{
+            position: absolute;
+            right: 1rem;
+            top: 10%;
+            height: 80%;
+        }
+        .spaceList .imgCake{
+            display: inline-block;
+            width: 43%;
+            height: 150px;
+            margin: .4rem;
+        }
+        .spaceList .imgCake img{
+            width: 100%;
+            border-radius: .5rem;
+        }
+        .spaceList .imgCake .title,.spaceList .imgCake .continue{
+            padding: .04rem;
+        }
+        .spaceList .imgCake .continue{
+            font-size: .6rem;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="pageHeader">
+        带我飞
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon" ng-controller="thisCtrl">
+        <div class="appCake headerBtnBox">
+            <div class="iconBtn" ng-repeat="list in btnList">
+                <img ng-src={{"../img/"+list.src}}>
+                <div class="btnText">{{list.title}}</div>
+            </div>
+        </div>
+        <div class="spaceList appCake" id="hotSpace">
+            <header>
+                <img class="headerIcon" src="../img/find_blue.png">
+                <span>花样撒野</span>
+                <img class="moreButton" src="../img/find_more.png"/>
+            </header>
+            <div class="imgCake" ng-repeat="a in helpList">
+                <img ng-src={{"../img/"+a.src}}>
+                <div class="title">{{a.title}}</div>
+                <div class="continue">{{a.continue}}</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/appData.js"></script>
+<script type="text/javascript">
+    angular.module("app",[])
+            .controller("thisCtrl",function($scope){
+                $scope.btnList = helpBtn;
+                $scope.helpList = helpList;
+            });
+</script>
+</html>

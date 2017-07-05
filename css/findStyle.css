@@ -1,0 +1,58 @@
+#headerAdv #advTitle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: 0.7rem;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0,0,0,.5);
+}
+.spaceList{
+    position: relative;
+    margin-top: .5rem;
+    padding: .5rem;
+}
+.spaceList header{
+    position: relative;
+    display: block;
+    height: 1.5rem;
+    margin-bottom: .25rem;
+}
+.spaceList header .headerIcon{
+    position: relative;
+    margin-left: -.2rem;
+    height: 100%;
+}
+.spaceList header span{
+    position: absolute;
+    display: inline-block;
+    padding: 0;
+    margin-left: .5rem;
+}
+.spaceList header .moreButton{
+    position: absolute;
+    right: 1rem;
+    top: 10%;
+    height: 80%;
+}
+.spaceList .imgCake{
+    display: inline-block;
+    width: 43%;
+    height: 150px;
+    margin: .4rem;
+}
+.spaceList .imgCake img{
+    width: 100%;
+    border-radius: .5rem;
+}
+.spaceList .imgCake .title,.spaceList .imgCake .continue{
+    padding: .04rem;
+}
+.spaceList .imgCake .continue{
+    font-size: .6rem;
+    overflow: hidden;
+}

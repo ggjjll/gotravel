@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        .iconBox{
+            display: inline-flex;
+            display: -webkit-inline-flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+        .iconBtn{
+            -webkit-flex:1;
+            flex: 1;
+            min-width: 25%;
+            height: 13vh;
+            text-align: center;
+        }
+        .iconBtn img{
+            height: 9.1vh;
+            width: auto;
+
+        }
+        .iconBtn .btnText{
+            line-height: 3.5vh;
+            height: 3.5vh;
+            text-align: center;
+            margin-top: -1vh;
+            font-size: .8rem;
+        }
+        .foodAd{
+            width: 100%;
+        }
+    </style>
+</head>
+<body ng-app="app">
+    <div id="pageHeader">
+        好想吃
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon" ng-controller="thisCtrl">
+        <div id="headerAdv">
+            <img src="../img/food_mainad.png" alt="" class="advImg">
+        </div>
+        <div class="appCake iconBox">
+            <div class="iconBtn" ng-repeat="list in foodList">
+                <img ng-src={{"../img/"+list.src}}>
+                <div class="btnText">{{list.title}}</div>
+            </div>
+        </div>
+        <img class="foodAd" src="../img/food_ad2.png" alt="">
+        <img class="foodAd" src="../img/food_ad1.png" alt="">
+
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+<script type="text/javascript" src="../js/angular.min.js"></script>
+<script type="text/javascript" src="../js/appData.js"></script>
+<script type="text/javascript">
+    angular.module("app",[])
+            .controller("thisCtrl",function($scope){
+                $scope.foodList = foodBtn;
+            })
+</script>
+</html>

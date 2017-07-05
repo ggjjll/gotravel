@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="description" content="用去浪，肆意去浪">
+    <meta name="Keywords" content="旅行，APP">
+    <title>去浪</title>
+    <link rel="stylesheet" href="../css/allStyle.css">
+    <style type="text/css">
+        #headerBox{
+            position: relative;
+            display: block;
+            background-color: #3FC0DD;
+            width: 100%;
+            height: auto;
+            padding: 15px 0;
+        }
+        #headerMain{
+            position: relative;
+            margin: 0 15px;
+            height: auto;
+            background-color: #FFFFFF;
+            padding: 10px;
+        }
+        #headerMain .title{
+            font-size: 0.7rem;
+            height: 1.2rem;
+            line-height: 1.2rem;
+        }
+        #headerMain .alink{
+            position: absolute;
+            right: 10px;
+            top: 13px;
+            color: #3FC0DD;
+        }
+        #intergralNum{
+            font-size: 2.3rem;
+            height: 3.5rem;
+            line-height: 3.5rem;
+            color: #68C10A;
+        }
+        #intergalBtn{
+            margin-top: 10px;
+            font-size: 0.7rem;
+            color: white;
+            height: 1.8rem;
+            line-height: 1.8rem;
+            background-color: #FF6C46;
+            text-align: center;
+        }
+        .item{
+            height: 2.3rem;
+            padding: 0.25rem 0.5rem;
+        }
+        .itemTitle{
+            line-height: 2.3rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        .item .itemName{
+            height: 1.5rem;
+            line-height: 1.5rem;
+            font-size: 0.95rem;
+        }
+        .item .itemTime{
+            height: 0.8rem;
+            line-height: 0.8rem;
+            font-size: 0.3rem;
+            color: #BABABA;
+        }
+        .item .itemNum{
+            position: absolute;
+            right: 2rem;
+            top: 0.25rem;
+            height: 2.3rem;
+            line-height: 2.3rem;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="pageHeader">
+        我的积分
+        <div id="closeButton"></div>
+    </div>
+    <div id="pageMainCon">
+        <div id="headerBox">
+            <div id="headerMain">
+                <span class="title">当前积分</span>
+                <span class="title alink">积分说明</span>
+                <div id="intergralNum">13910分</div>
+                <div id="intergalBtn">积分兑换商品</div>
+            </div>
+        </div>
+        <div class="item itemTitle">
+            最近30天积分记录
+        </div>
+        <div class="item appCake">
+            <div class="itemName">过期积分返还</div>
+            <div class="itemTime">2016-07-06</div>
+            <div class="itemNum" style="color: #68C10A">+13790</div>
+        </div>
+        <div class="item appCake">
+            <div class="itemName">过期积分</div>
+            <div class="itemTime">2016-07-01</div>
+            <div class="itemNum" style="color: #FF6C46">-13790</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/closeEvent.js"></script>
+</html>
